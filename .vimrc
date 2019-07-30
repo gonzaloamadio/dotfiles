@@ -697,6 +697,7 @@ function! WktToGeogebra()
     " Save cursor position
     let l:save = winsaveview()
     %s/\(-\)\{0,1}\(\d\+\)\(\.\d\+\)\{0,1} \(-\)\{0,1}\(\d\+\)\(\.\d\+\)\{0,1}/{\1\2\3,\4\5\6}/ge
+    %s/POINT({\(-\)\{0,1}\(\d\+\)\(\.\d\+\)\{0,1},\(-\)\{0,1}\(\d\+\)\(\.\d\+\)\{0,1}})/(\1\2\3,\4\5\6)/ge
     %s/POLYGON((/PolyLine[PointList[{/e
     %s/))/}]]/e
     "%s/),(/}]]\rPolyLine[PointList[{/e
