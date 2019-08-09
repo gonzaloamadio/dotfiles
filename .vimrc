@@ -93,6 +93,9 @@ Plug 'terryma/vim-expand-region'
 " Better commit scren
 Plug 'rhysd/committia.vim'
 
+" Autocomplete with ML powers!
+Plug 'zxqfl/tabnine-vim'
+
 " Initialize plugin system
 call plug#end()
 
