@@ -609,7 +609,8 @@ command! Break :let @+="break ".expand('%:p').":".line(".")
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => iRobot specific
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set path+=~/irobot/brewst/**,~/irobot/brewst/*,~/irobot/brewst/
+set path+=/irobot/brewst/**,/irobot/brewst/*,/irobot/brewst/
+set path+=/irobot/floorcare-dev/**,/irobot/floorcare-dev/*,/irobot/floorcare-dev/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spellchecking for commit messages
