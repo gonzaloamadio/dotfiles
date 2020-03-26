@@ -1,5 +1,7 @@
 #! /bin/bash
 
+sudo apt install -y git
+
 # Setup all the things!
 
 USER_EMAIL=`git config --global user.email`
@@ -46,6 +48,9 @@ sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb
 
 # Install useful stuff
 sudo apt -y install vlc gnome-clocks meld xclip silversearcher-ag exuberant-ctags htop tig flake8 python-flake8 python3-flake8 clang-7
+
+# Install python packages
+sudo apt -y install libpq-dev python3.6-dev python-pip psycopg2-binary 
 
 # Improve wrong password messages
 sudo sed -i 's/#\s*Defaults\s\+insults/Defaults\tinsults/' /etc/sudoers
