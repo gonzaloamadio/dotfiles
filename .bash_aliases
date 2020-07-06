@@ -42,9 +42,8 @@ alias v='vi'
 alias xopen='xdg-open'
 
 # Life's too short! Go places!
-alias o='cd $HOME/kw/OOHLA.media/oohlamedia-dev/'
-alias of='cd $HOME/kw/OOHLA.media/oohlamedia-frontend/'
-alias soohla='ssh oohla@oohla-dev' # DigitalOcen
-alias sroohla='ssh root@oohla-dev' #DigitalOcean
-alias fcoohla='ssh -p 17177 oohlamedia@45.33.18.240' # Fastcomet
-alias kleene='ssh lnardelli@dcc.fceia.unr.edu.ar' # Dcc's Kleene
+alias cdpg='cd $HOME/Playground'
+alias cdapi='cd $HOME/Playground/osp-api'
+alias cdrep='cd $HOME/Playground/osp-reports-engine'
+alias cdui='cd $HOME/Playground/osp-ui'
+# alias soohla='ssh oohla@oohla-dev' # DigitalOcen
