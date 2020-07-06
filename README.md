@@ -31,8 +31,21 @@ cd ~
 sudo bash .setup_computer.sh
 ```
 
+### GNOME Extensions
+
+Install some gnome extensions : https://linuxconfig.org/top-10-best-gnome-extensions-for-ubuntu-20-04-desktop
+
+* system monitor
+* clipboard indicator
+* extensions
+* force quit
+* screenshot tool
+* todo.txt
+* ubuntu app indicator
+
 
 ### TODO
  - Add images?
  - Create AdPlan specific config
  - TEST IT!
+ 
