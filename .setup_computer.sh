@@ -49,6 +49,9 @@ sudo dpkg -i /tmp/google-chrome-stable_current_amd64.deb
 # Install useful stuff
 sudo apt -y install vlc gnome-clocks meld xclip silversearcher-ag exuberant-ctags htop tig flake8 python-flake8 python3-flake8 clang-7 ctags
 
+# ls as tree : https://ostechnix.com/view-directory-tree-structure-linux/
+sudo apt-get install tree
+
 sudo apt -y install chrome-gnome-shell
 
 # Install python packages
