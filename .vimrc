@@ -596,7 +596,10 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2
 " Add mouse support (easily resize split windows). If you do not like here is
 " how to resize windows: https://vim.fandom.com/wiki/Resize_splits_more_quickly
 " https://vimhelp.org/windows.txt.html#window-resize
-set mouse=a
+" Enable
+" set mouse=a
+" Disable
+" set mouse-=a
 
 " We can change tabs and spaces on a file extension basis :
 " au BufNewFile,BufRead *.py
