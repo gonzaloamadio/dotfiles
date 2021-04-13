@@ -7,6 +7,7 @@
 " ============ FOR MACOS 
 " brew install node
 " npm install jshint -g
+" If this file is not working, check : https://gist.github.com/topheman/6774b9335d0728edb68d
 
 " ============ More colors
 " https://github.com/gmist/vim-palette
