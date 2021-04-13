@@ -4,6 +4,17 @@
 " https://realpython.com/vim-and-python-a-match-made-in-heaven/#vim-extensions
 " # Other ref: https://nvie.com/posts/how-i-boosted-my-vim/
 
+" ============ FOR MACOS 
+" brew install node
+" npm install jshint -g
+
+" ============ More colors
+" https://github.com/gmist/vim-palette
+
+" ============ colors/colorsbox-faff.vim not found?
+" I have a zip file in my drive called vimrc.zip with that file
+
+
 set encoding=utf-8
 let using_neovim = has('nvim')
 let using_vim = !using_neovim
