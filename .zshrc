@@ -5,6 +5,14 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+########## THINGS TO CHECK ################
+# Comment this line in ~/.p10k.zsh, so we see full branch name
+# (( $#branch > 32 )) && branch[13,-13]="…"  # <-- this line
+
+# Check down here ZSH variable is ok
+
+###########################################
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
