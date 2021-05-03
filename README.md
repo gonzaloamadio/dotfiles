@@ -1,5 +1,9 @@
-# Lucio's Dotfiles
+Dotfiles
 ##### (Inspired by https://github.com/nachovizzo/dotfiles/)
+
+TODO: Read this posts, to add some python management libraries that are useful
+https://jacobian.org/2019/nov/11/python-environment-2020/
+
 
 ### Prerequisites
 To run this, you need to have git installed and configured:
