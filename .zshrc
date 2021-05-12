@@ -1,3 +1,12 @@
+# https://gist.github.com/SeppoTakalo/f526f761a44f07464cb5df89c8a9389e
+# https://carlosazaustre.es/configura-tu-mac-como-un-desarrollador-profesionalque-2
+
+# Also configure this to exit on cmd+d
+# https://superuser.com/questions/158375/how-do-i-close-the-terminal-in-osx-from-the-command-line/1385450#:~:text=Command%20%2B%20Q%20%2D%3E%20closes%20the%20application%2Fprocess.&text=The%20first%20window%20is%20always,want%20to%20close%20the%20window.
+
+# REF: https://medium.com/macoclock/forced-to-use-zsh-by-macos-catalina-lets-fix-our-history-command-first-9ce86dca540e
+
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -134,13 +143,7 @@ source $ZSH/oh-my-zsh.sh
 
 
 ###################################### GON CUSTOM THINGS
-# https://gist.github.com/SeppoTakalo/f526f761a44f07464cb5df89c8a9389e
-# https://carlosazaustre.es/configura-tu-mac-como-un-desarrollador-profesionalque-2
 
-# Also configure this to exit on cmd+d
-# https://superuser.com/questions/158375/how-do-i-close-the-terminal-in-osx-from-the-command-line/1385450#:~:text=Command%20%2B%20Q%20%2D%3E%20closes%20the%20application%2Fprocess.&text=The%20first%20window%20is%20always,want%20to%20close%20the%20window.
-
-# REF: https://medium.com/macoclock/forced-to-use-zsh-by-macos-catalina-lets-fix-our-history-command-first-9ce86dca540e
 # this parameters are in: /etc/zshrc
 HISTSIZE=99999
 HISTFILESIZE=999999
