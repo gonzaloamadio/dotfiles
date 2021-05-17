@@ -30,15 +30,22 @@
     ci = commit
     df = diff
     dt = difftool
+    # With -p, wee can see diff between each commit
     lg = log -p
     last = log --name-status HEAD^..HEAD
     lastp = log -p -m --first-parent -n1
+    lg1 = log --oneline
+    lg2 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg3 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -p
 
     diffbranch = "!git log \"$1\"  ^\"$2\" --no-merges"
     graph="log --graph --abbrev-commit --decorate --date=relative --all"
 
     # Show files ignored by git:
     ign = ls-files -o -i --exclude-standard
+ 
+    # Can configure aliases executing this commands
+    # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Highlight whitespace in diffs
 [color]
