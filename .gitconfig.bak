@@ -47,6 +47,8 @@
     # Can configure aliases executing this commands
     # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
+    git config --global branch.sort -committerdate
+
 # Highlight whitespace in diffs
 [color]
     ui = true
