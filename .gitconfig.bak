@@ -48,6 +48,9 @@
     # git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
     git config --global branch.sort -committerdate
+    
+    # See all alias
+    # git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\ =\ /
 
 # Highlight whitespace in diffs
 [color]
