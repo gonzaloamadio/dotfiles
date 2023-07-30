@@ -1,0 +1,50 @@
+name: Code quality
+
+on:
+  # push:
+  pull_request:
+  #   branches:
+  #     - master
+  # release:
+  #   types: [published]
+
+jobs:
+  code-quality:
+    name: Linters
+    runs-on: [ci-small]
+    env:
+      pre_commit_cache_folder: /tmp/pre-commit-cache
+    steps:
+      - name: Checkout code
+        uses: SOME_ACTION_TO_CHECKOUT_CODE
+
+      - name: Get changed files
+        uses: SOME_ACTION_TO_GET_CHANGED_FILES
+        id: get-changed-files
+        with:
+          list-files: shell
+          filters: |
+            all:
+              - added|modified: '**/*'
+
+      - name: Run Pre-commit
+        if: ${{ steps.get-changed-files.outputs.all == 'true' }}
+        env:
+          SKIP: "isort,pip-compile"
+        run: |
+          mkdir -p "${pre_commit_cache_folder}"
+          chmod +x ./scripts/install-and-run-pre-commit.sh
+          docker run \
+            --rm \
+            --mount type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock \
+            --mount type=bind,source="${PWD}",target="${PWD}" \
+            --mount type=bind,source="${pre_commit_cache_folder}",target="/root/.cache/pre-commit" \
+            --workdir "${PWD}" \
+            --env GHE_TOKEN="${BUILD_GITHUB_TOKEN}" \
+            --env GITHUB_ACTIONS \
+            --env SKIP \
+            --entrypoint ./scripts/install-and-run-pre-commit.sh \
+            PATH_TO_TIMAGE:latest \
+            --show-diff-on-failure \
+            --files \
+            ${{ steps.get-changed-files.outputs.all_files }}
