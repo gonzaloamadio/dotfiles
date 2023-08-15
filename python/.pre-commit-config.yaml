@@ -1,0 +1,58 @@
+# https://github.com/pylint-dev/pylint/blob/main/.pre-commit-config.yaml
+# https://github.com/rlworkgroup/dowel/blob/master/.pre-commit-config.yaml
+fail_fast: false # set to true to have pre-commit stop running hooks after the first failure.
+
+repos:
+  - repo: 'https://github.com/pre-commit/pre-commit-hooks'
+    rev: v2.5.0
+    hooks:
+      - id: trailing-whitespace
+        language_version: python3.9
+      - id: end-of-file-fixer
+        language_version: python3.9
+      - id: check-builtin-literals
+        language_version: python3.9
+      - id: check-merge-conflict
+        language_version: python3.9
+      - id: debug-statements
+        language_version: python3.9
+        exclude: integration/api/environment.py
+      - id: check-added-large-files          # Prevent giant files from being committed
+      - id: check-ast                        # Simply check whether files parse as valid python.
+      - id: check-merge-conflict             # Check for files that contain merge conflict strings
+  - repo: 'https://github.com/psf/black'
+    rev: 22.3.0
+    hooks:
+      - id: black
+        language_version: python3.9
+        types: [python]
+  - repo: 'https://github.com/pycqa/isort'
+    rev: 5.12.0
+    hooks:
+      - id: isort
+        name: Sorting import statements with isort (python)
+        types:
+          - python
+        language_version: python3.9
+        files: \.py$
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.0.0
+    hooks:
+    -   id: autoflake
+        name: Remove unused variables and imports (autoflake)
+        language: python
+        files: \.py$
+  - repo: 'git@github.braintreeps.com:venmo/venmo-pre-commit-hooks.git'
+    rev: v0.22.0
+    hooks:
+      - id: flake8-py35
+        alias: flake8
+      - id: pylint-py35
+        alias: pylint
+  - repo: https://github.com/asottile/pyupgrade
+    rev: v2.32.0
+    hooks:
+    -   id: pyupgrade
+        name: Upgrade python synthax
+        # args: ['--py37-plus']  # if we upgrade python, this will remove Python <= 3.6 only blocks
+
